@@ -1,4 +1,64 @@
 # Task Manager
+## **Setting Up MySQL Database Locally**
+
+To run this project, you need a local MySQL database. Follow these steps to set it up:
+
+### **Step 1: Install MySQL**
+1. Download and install MySQL Community Server from the [official MySQL website](https://dev.mysql.com/downloads/mysql/).
+2. During installation, note the username (`root` by default) and set a password for the MySQL server.
+
+---
+
+### **Step 2: Open MySQL**
+1. Open a terminal (Command Prompt or PowerShell on Windows).
+2. Access MySQL by running:
+   ```
+   mysql -u root -p
+   ```
+   Replace `root` with your username if it's different. Enter your password when prompted.
+
+---
+
+### **Step 3: Create the Database**
+1. Once inside the MySQL shell, create a database by running:
+   ```
+   CREATE DATABASE taskManager;
+   ```
+2. Verify the database was created by running:
+   ```
+   SHOW DATABASES;
+   ```
+
+---
+
+### **Step 4: Construct Your Database URL**
+Your SQLAlchemy connection URL should follow this format:
+```
+mysql+pymysql://your_username:your_password@localhost:3306/taskManager
+```
+
+- Replace `your_username` with your MySQL username.
+- Replace `your_password` with your MySQL password.
+
+For example:
+```
+mysql+pymysql://root:example_password@localhost:3306/taskManager
+```
+
+---
+
+### **Step 5: Update the `.env` File**
+Create a `.env` file in the project root directory and add the following:
+``` 
+DB_URL=mysql+pymysql://your_username:your_password@localhost:3306/taskManager
+```
+
+Replace the placeholders with your actual MySQL credentials.
+
+---
+
+
+Now your MySQL database is ready to use with this project!
 
 ## Installation and Setup Guide (Windows)
 
