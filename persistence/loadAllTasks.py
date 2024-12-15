@@ -9,7 +9,7 @@ def load_all_tasks():
         tasks = session.query(Task).all()  
         
         # Convert Task objects into dictionaries for easy use in the UI
-        task_list = [{"name": task.name, "status": task.status} for task in tasks]
+        task_list = [{"id": task.id, "name": task.name, "status": task.status} for task in tasks]
         return task_list
     except Exception as e:
         print(f"Error loading tasks: {e}")
