@@ -3,6 +3,7 @@ import os
 from models.taskEntity import Task,Base
 from persistence.connection import init_db, get_db_session, engine
 from utils.jsonHelpers import load_json,save_json, file_path_generator
+from ui.mainMenu import main_menu
 
 from sqlalchemy.orm import sessionmaker
 
@@ -36,4 +37,4 @@ def main():
 
 
 if __name__=="__main__":
-    main()
+    main_menu()
