@@ -1,6 +1,7 @@
 import streamlit as st
 from ui.addTaskMenu import add_task_menu
 from ui.listAllTaskMenu import list_all_tasks
+from ui.updateTaskMenu import update_task_menu
 
 def main_menu():
     st.title("Task Manager")
@@ -20,7 +21,7 @@ def main_menu():
     elif option == "List All Tasks":
         list_all_tasks()
     elif option == "Update Task Status":
-        st.write("Feature not implemented yet.")
+        update_task_menu()
     elif option == "Delete Task":
         st.write("Feature not implemented yet.")
     elif option == "Save and Load Tasks":
