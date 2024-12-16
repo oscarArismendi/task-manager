@@ -4,6 +4,7 @@ from ui.addTaskMenu import add_task_menu
 from ui.listAllTaskMenu import list_all_tasks
 from ui.updateTaskMenu import update_task_menu
 from ui.deleteTaskMenu import delete_task_menu
+from ui.saveAndLoadTaskMenu import save_and_load_task_menu
 
 def main_menu():
     st.title("Task Manager")
@@ -27,4 +28,4 @@ def main_menu():
     elif option == "Delete Task":
         delete_task_menu()
     elif option == "Save and Load Tasks":
-        st.write("Feature not implemented yet.")
+        save_and_load_task_menu()

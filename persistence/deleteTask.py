@@ -19,3 +19,17 @@ def delete_task(task_id):
         raise e
     finally:
         session.close()
+
+def delete_all_tasks():
+    # Delete all tasks from the database
+    session = get_db_session()
+    try:
+        session.query(Task).delete()  # Delete all tasks
+        session.commit()  # Commit the transaction
+        print("All tasks deleted successfully.")
+    except Exception as e:
+        session.rollback()  # Rollback in case of an error
+        print(f"Error deleting all tasks: {e}")
+        raise e
+    finally:
+        session.close()
