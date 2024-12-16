@@ -108,7 +108,7 @@ This should display all the libraries and their respective versions that are ins
 
 You are now ready to run your project. Execute the main Python script with the following command:
   ```
-  python main.py
+  streamlit run main.py
   ```
 
 ### 7. Deactivate the Virtual Environment
